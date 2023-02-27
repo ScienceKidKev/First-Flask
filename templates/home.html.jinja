@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First App</title>
+    </head>
+
+    <body>
+        <h1>Hello World</h1>
+        <p>Welcome to my first Flask website</p>
+        <p>This variable is from python: {{my_variable}}</p>
+        <p>Favorite animals are:{{my_list}}</p>
+        <ul>
+            {%for animal in list%}
+                <li>{{animal}}</li>
+            {% endfor %}
+        </ul>
+
+        {% if user =='admin' %}
+            <p>SUPER SECRET ADMIN CONTROLS</p>
+            <button>Ban Mr. Forlenza</button>
+        {% endif %}
+    </body>
+</html>
