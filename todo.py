@@ -3,8 +3,8 @@ from flask import Flask, render_template, request
 app=Flask(__name__)
 
 my_todos=[
-    'Visit Vietnam',
-    'Complete my bachelors'
+    'Grow a couple more inches',
+    'Get scholarships for track'
 ]
 
 @app.route('/')
