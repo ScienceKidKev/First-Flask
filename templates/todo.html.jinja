@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>My First App</title>
+    </head>
+
+    <body>
+        <ul>
+            {%for todo in todos%}
+                <li>{{todo}}</li>
+            {% endfor %}
+        </ul>
+        <form
+            action='/add'
+            method='post'
+        >
+            <textarea name='new_todo'>
+            </textarea>
+            <input type='submit'>
+        </form>
+    </body>
+
+
+
+
+
+</html>
