@@ -17,4 +17,5 @@ def index():
 @app.route('/add', methods=['POST'])
 def add():
     new_todo= request.form('new_todo')
+    new_todo=input('What do you want to do before year ends?')
     return new_todo

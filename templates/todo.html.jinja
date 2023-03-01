@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
+
+  <style>
+    div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px 5px 5px 5px;
+  background-color: #f4f2ef;
+  border: 2px solid #b69036;
+}
+
+   </style> 
 <head>
-        <title>My First App</title>
+        <title>My Todos</title>
     </head>
 
-    <body>
+    <body class="container">
+     <main>
+     <div class="sticky">My todos</div>
+    <p>Here are two things I want to do before the year ends:</p>
         <ul>
             {%for todo in todos%}
                 <li>{{todo}}</li>
@@ -18,6 +33,9 @@
             </textarea>
             <input type='submit'>
         </form>
+
+
+       
     </body>
 
 
