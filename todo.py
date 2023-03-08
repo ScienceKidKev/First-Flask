@@ -24,9 +24,10 @@ def index():
 
 @app.route('/add', methods=['POST'])
 def add():
-    new_todo= request.form('new_todo')
-    new_todo=input('What do you want to do before year ends?')
-    return new_todo
+    new_todo = request.form['new_todo']
+    cursor.execute(f"INSERT INTO `todos`(`Description`) VALUES ('{new_todo}') ")
+    my_todos.append(new_todo)
+    return result(('/todo'))
 
 
 
@@ -42,10 +43,3 @@ connection= pymysql.connect(
     autocommit=True
 )
 
-cursor=connection.cursor()
-
-cursor.execute('SELECT * FROM `todos`')
-
-result=cursor.fetchall()
-
-print(result[1]['Description'])

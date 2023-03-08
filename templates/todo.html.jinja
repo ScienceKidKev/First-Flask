@@ -36,7 +36,7 @@ li   {color:rgb(0, 0, 0)}
         <ul>
         
             {%for todo in todos%}
-                <li>{{todo}}</li>
+                <li style="{% if todo['complete']== 1%} color: red {%endif%}"> {{todo['Description']}}</li>
             {% endfor %}
             
         </ul>
@@ -44,9 +44,12 @@ li   {color:rgb(0, 0, 0)}
             action='/add'
             method='post'
         >
-            <textarea name='new_todo'>
-            </textarea>
-            <input type='submit'>
+        <div class="form-group mb-2">
+            <label for="exampleTextarea"> Add todo</label>
+            <textarea name="new_todo" class="form-control" rows="3"></textarea>
+        </div>  
+        <input type='submit' class="btn btn-primary ml-auto mr-0">
+        
         </form>
 
 
