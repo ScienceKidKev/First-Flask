@@ -36,11 +36,13 @@ li   {color:rgb(0, 0, 0)}
         <ul>
         
             {%for todo in todos%}
-                <li style="{% if todo['Complete']== 1%} color: red {%endif%}"> {{todo['Description']}}</li>
+                <li style="{% if todo['Complete']== 1%} text-decoration-line: line-through; color: red {%endif%}"> {{todo['Description']}}</li>
+                {%if todo['Complete'] ==0 %}
                 <form action="/complete" method='post'>
                     <input name="todo_id" value="{{todo['ID']}}" hidden>
                     <input type="submit" value="complete">
                 </form>
+                {%endif%}
             {% endfor %}
             
         </ul>
