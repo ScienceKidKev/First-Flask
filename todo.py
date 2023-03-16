@@ -31,6 +31,8 @@ my_todos=[
 def index():
     cursor=connection.cursor()
     cursor.execute('SELECT * FROM `todos`')
+    cursor.execute("SELECT * FROM `todos` ORDER BY `Complete`")
+
 
     results=cursor.fetchall()
      

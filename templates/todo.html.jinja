@@ -49,7 +49,7 @@ li   {color:rgb(229, 147, 14)}
                 {%if todo['Complete'] ==0 %}
                 <form action="/complete" method='post'>
                     <input name="todo_id" value="{{todo['ID']}}" hidden>
-                    <input type="submit" value="complete">
+                    <input type="submit" value="complete" class="btn btn-primary ml-auto mr-0">
                 </form>
                 {%endif%}
             {% endfor %}
@@ -63,7 +63,7 @@ li   {color:rgb(229, 147, 14)}
             <label for="exampleTextarea"> Add todo</label>
             <textarea name="new_todo" class="form-control" rows="3"></textarea>
         </div>  
-        <input type='submit' class="btn btn-primary ml-auto mr-0" >
+        <input type='submit' class="btn btn-primary ml-auto mr-0"  >
         
         </form>
 
